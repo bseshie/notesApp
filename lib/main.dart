@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/notes_list_screen.dart';
+import 'package:flutter_application_1/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const NotesListScreen(),
+      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: kLightThemeBackgroundColor),
+      home: const NotesListScreen(notesModel: null,),
+      
     );
   }
 }
